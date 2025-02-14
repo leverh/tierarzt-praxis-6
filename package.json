@@ -9,8 +9,17 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "description": "",
   "dependencies": {
     "bootstrap": "^5.3.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leverh/tierarzt-praxis-6.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leverh/tierarzt-praxis-6/issues"
+  },
+  "homepage": "https://github.com/leverh/tierarzt-praxis-6#readme",
+  "description": ""
 }
