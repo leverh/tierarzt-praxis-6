@@ -1,0 +1,301 @@
+:root {
+    --primary: #4A90E2;
+    --secondary: #67B26F;
+    --accent: #FF6B6B;
+    --text-dark: #2C3E50;
+    --text-light: #757575;
+    --background: #F8FAFC;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-dark);
+}
+
+/* Navbar Styles */
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    color: var(--primary) !important;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: var(--text-dark) !important;
+    position: relative;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.5rem;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('/assets/team.jpg') center/cover no-repeat;
+    margin-top: 76px; /* Adjust based on navbar height */
+}
+
+.hero-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    z-index: 2;
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section h2 {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* About Section */
+.accent-line {
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+}
+
+.hover-lift {
+    transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px);
+}
+
+.about-text p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Team Section Styles */
+.team-card {
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-photo {
+    transform: scale(1.05);
+}
+
+.team-card .card-title {
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.team-card ul li {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Services Section */
+.service-card {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    fill: var(--primary);
+    transition: fill 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    fill: var(--accent);
+}
+
+.service-card ul li {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.service-card .card-title {
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+/* Hours Section */
+.hours-card {
+    transition: transform 0.3s ease;
+}
+
+.hours-card:hover {
+    transform: translateY(-5px);
+}
+
+.hours-card .card-title {
+    color: var(--text-dark);
+}
+
+.hours-card ul li {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* Footer */
+.map-container {
+    height: 300px;
+}
+
+.phone-number {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.phone-number a {
+    transition: opacity 0.3s ease;
+}
+
+.phone-number a:hover {
+    opacity: 0.8;
+}
+
+/* Scroll to Top Button */
+#scrollTop {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#scrollTop.show {
+    opacity: 1;
+    display: block !important;
+}
+/* Hamburger Menu Styles */
+/* The hamburger button itself */
+.navbar-toggler {
+    border: none;  /* Remove default border */
+    padding: 0.5rem;
+}
+
+/* Remove the focus outline */
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* Hamburger icon */
+.navbar-toggler-icon {
+    background-image: none !important;  /* Remove default icon */
+    position: relative;
+    width: 24px;
+    height: 2px;
+    background-color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+/* Create the hamburger lines using pseudo-elements */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    transform: translateY(-8px);
+}
+
+.navbar-toggler-icon::after {
+    transform: translateY(8px);
+}
+
+/* Animation for when menu is open */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+}
+
+/* Privacy Policy Page Specific Styles */
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.list-group-item {
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: var(--background);
+}
+
+/* Links */
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+/* Typography */
+.text-muted {
+    color: var(--text-light) !important;
+}
+
+.privacy-page h1, 
+.privacy-page h2, 
+.privacy-page h3, 
+.privacy-page h4 {
+    color: var(--text-dark);
+}
