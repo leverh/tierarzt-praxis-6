@@ -48,8 +48,18 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: url('/assets/team.jpg') center/cover no-repeat;
-    margin-top: 76px; /* Adjust based on navbar height */
+    position: relative;
+    overflow: hidden;
+    margin-top: 76px;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero-overlay {
@@ -298,4 +308,11 @@ a:hover {
 .privacy-page h3, 
 .privacy-page h4 {
     color: var(--text-dark);
+}
+
+
+@media (max-width: 368px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
 }
